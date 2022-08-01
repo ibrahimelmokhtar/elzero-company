@@ -1,0 +1,20 @@
+/*  Google Fonts: Cairo
+    light: 300, Regular: 400, Bold: 700
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+/* ************************** General Rules *************************** */
+/* Root Variables */
+:root {
+    --main-color: #2196f3;
+    --transition-duration: 0.5s;
+    --font-light: 300; --font-regular: 400; --font-bold: 700;
+}
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    color: #000000;
+}
+html { scroll-behavior: smooth; }
