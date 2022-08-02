@@ -6,10 +6,12 @@
 /* Root Variables */
 :root {
     --main-color: #2196f3;
+    --hover-color: #fafafa;
+    --main-padding: 64px;
     --transition-duration: 0.5s;
     --font-light: 300; --font-regular: 400; --font-bold: 700;
 }
-/* General */
+/* General Rules */
 * {
     margin: 0;
     padding: 0;
@@ -18,3 +20,128 @@
     color: #000000;
 }
 html { scroll-behavior: smooth; }
+ul { list-style: none; }
+a { text-decoration: none; }
+/* Main Content Container */
+.container { padding: 0 var(--main-padding); }
+/* ************************** Header *************************** */
+header { position: sticky; top: 0; left: 0; width: 100%; z-index: 2; }
+/* Main Content Container */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px #dddddd;
+    position: relative;
+}
+/* Company Logo */
+#logo a {
+    color: var(--main-color);
+    font-size: 20pt;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+}
+/* Main Navbar Container */
+header nav { height: 10vh; }
+/* Main Navbar */
+#links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+/* Navbar Main Items */
+#links > li { height: 100%; }
+/* Main Items Content */
+#links > li > a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+    text-transform: capitalize;
+    font-size: 16pt;
+    font-weight: var(--font-regular);
+    background-color: transparent;
+    position: relative;
+    transition-property: color, background-color;
+    transition-duration: var(--transition-duration);
+}
+/* Top Ribbon On Main Content */
+#links > li > a::before {
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width var(--transition-duration);
+}
+/* Navbar Main Item Hover Effects */
+#links > li > a:hover { background-color: var(--hover-color); color: var(--main-color); }
+#links > li > a:hover::before { width: 100%; }
+/* Mega Menu Container */
+#additional__links {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 32px;
+    padding: 32px;
+    width: calc(100% - 2 * var(--main-padding));
+    border-bottom: 4px solid var(--main-color);
+    position: absolute;
+    top: calc(100% + 2px);
+    left: -120%;
+    opacity: 0;
+    transition-property: left, opacity;
+    transition-duration: var(--transition-duration);
+}
+#links > li:last-child:hover #additional__links { left: var(--main-padding); opacity: 1; }
+/* Mega Menu Main Image */
+#additional__links .image__container img { max-width: 100%; }
+/* Mega Menu Extra Links Container */
+#additional__links .extra__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    height: 100%;
+    min-width: 240px;
+}
+/* Mega Menu Main Links Container */
+#additional__links .extra__links li { width: 100%; position: relative; }
+#additional__links .extra__links li:not(:last-child) { border-bottom: 1px solid #e9e6e6; }
+/* Mega Menu Links Hover Effect */
+#additional__links .extra__links li::before {
+    content: '';
+    background-color: var(--hover-color);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width var(--transition-duration);
+}
+#additional__links .extra__links li:hover::before { width: 100%; }
+/* Mega Menu Main Links */
+#additional__links .extra__links a {
+    font-size: 14pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+    z-index: 2;
+}
+#additional__links .extra__links a * { color: var(--main-color); }
+/* Mega Menu List Icons */
+#additional__links .extra__links .list__icon { margin-right: 16px; }

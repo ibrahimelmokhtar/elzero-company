@@ -1,0 +1,63 @@
+/* based on Bootstrap Grid System */
+/* *************** xs: extra small devices (phones) ******************* */
+@media only screen and (max-width: 768px) {
+    /* ********* General ********* */
+    body { background-color: aqua; }
+    /* Root Variables */
+    :root { --main-padding: 32px; }
+    /* Main Content Container */
+    .container { padding: 0 var(--main-padding); }
+    /* ********* Header ********* */
+    header .container { flex-direction: column; height: 16vh; padding-top: 16px; }
+    /* Company Logo */
+    #logo a { font-size: 18pt; }
+    /* Main Items Content */
+    #links > li > a { padding: 12px; font-size: 13pt; }
+    /* Top Ribbon On Main Content */
+    #links > li > a::before { top: unset; bottom: 0; }
+    /* Mega Menu Container */
+    #additional__links { flex-direction: column; gap: 0; align-items: center; max-height: 75vh; overflow-y: auto; }
+    /* Mega Menu Main Image Container */
+    #additional__links .image__container { display: none; }
+    /* Mega Menu Main Links Container */
+    #additional__links .extra__links { min-width: 100%; }
+    #additional__links .extra__links:not(:last-child) li:last-child { border-bottom: 1px solid #e9e6e6; }
+}
+/* ***************** sm: small devices (tablets) ********************** */
+@media only screen and (min-width: 768px) {
+    /* ********* General ********* */
+    body { background-color: blanchedalmond; }
+    /* Root Variables */
+    :root { --main-padding: 64px; }
+    /* Main Content Container */
+    .container { padding: 0 64px; }
+    /* ********* Header ********* */
+    /* Company Logo */
+    #logo a { font-size: 18pt; }
+    /* Main Items Content */
+    #links > li > a { padding: 0 16px; font-size: 14pt; }
+    /* Mega Menu Main Image Container */
+    #additional__links .image__container { display: none; }
+}
+/* ************** md: medium devices (small laptops) ****************** */
+@media only screen and (min-width: 992px) {
+    /* ********* General ********* */
+    body { background-color: brown; }
+    /* ********* Header ********* */
+    /* Company Logo */
+    #logo a { font-size: 20pt; }
+    /* Main Items Content */
+    #links > li > a { font-size: 16pt; }
+    /* Mega Menu Main Image Container */
+    #additional__links .image__container { display: block; }
+}
+/* ************ lg: large devices (laptops and desktops) ************** */
+@media only screen and (min-width: 1200px) {
+    /* ********* General ********* */
+    body { background-color: chartreuse; }
+    /* ********* Header ********* */
+    /* Company Logo */
+    #logo a { font-size: 24pt; }
+    /* Main Items Content */
+    #links > li > a { padding: 0 32px; }
+}
