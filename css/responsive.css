@@ -4,11 +4,11 @@
     /* ********* General ********* */
     body { background-color: aqua; }
     /* Root Variables */
-    :root { --main-padding: 32px; }
+    :root { --main-padding: 32px; --header-height: 16vh; }
     /* Main Content Container */
     .container { padding: 0 var(--main-padding); }
     /* ********* Header ********* */
-    header .container { flex-direction: column; height: 16vh; padding-top: 16px; }
+    header .container { flex-direction: column; height: var(--header-height); padding-top: 16px; }
     /* Company Logo */
     #logo a { font-size: 18pt; }
     /* Main Items Content */
@@ -22,6 +22,17 @@
     /* Mega Menu Main Links Container */
     #additional__links .extra__links { min-width: 100%; }
     #additional__links .extra__links:not(:last-child) li:last-child { border-bottom: 1px solid #e9e6e6; }
+    /* ********* Landing ********* */
+    /* Main Container */
+    #landing .container { background-image: url('../assets/images/landing-image.webp'); }
+    /* Main Landing Text Container */
+    #landing .text__container { text-align: center; }
+    /* Main Landing Image Container */
+    #landing .image__container { display: none; }
+    /* Main Landing Title */
+    #landing .text__container h1 { font-size: 26pt; }
+    /* Main Landing Paragraph */
+    #landing .text__container p { font-size: 16pt; }
 }
 /* ***************** sm: small devices (tablets) ********************** */
 @media only screen and (min-width: 768px) {
@@ -38,6 +49,13 @@
     #links > li > a { padding: 0 16px; font-size: 14pt; }
     /* Mega Menu Main Image Container */
     #additional__links .image__container { display: none; }
+    /* ********* Landing ********* */
+    /* Main Container */
+    #landing .container { background-image: url('../assets/images/landing-image.webp'); }
+    /* Main Landing Text Container */
+    #landing .text__container { text-align: center; }
+    /* Main Landing Image Container */
+    #landing .image__container { display: none; }
 }
 /* ************** md: medium devices (small laptops) ****************** */
 @media only screen and (min-width: 992px) {
@@ -50,6 +68,19 @@
     #links > li > a { font-size: 16pt; }
     /* Mega Menu Main Image Container */
     #additional__links .image__container { display: block; }
+    /* ********* Landing ********* */
+    /* Main Container */
+    #landing .container { background-image: unset; }
+    /* Transparent Background */
+    #landing .container::before { display: none; }
+    /* Main Landing Text Container */
+    #landing .text__container { text-align: start; }
+    /* Main Landing Image Container */
+    #landing .image__container { display: block; max-width: 500px; }
+    /* Main Landing Title */
+    #landing .text__container h1 { font-size: 22pt; }
+    /* Main Landing Paragraph */
+    #landing .text__container p { font-size: 14pt; }
 }
 /* ************ lg: large devices (laptops and desktops) ************** */
 @media only screen and (min-width: 1200px) {
@@ -60,4 +91,11 @@
     #logo a { font-size: 24pt; }
     /* Main Items Content */
     #links > li > a { padding: 0 32px; }
+    /* ********* Landing ********* */
+    /* Main Landing Image Container */
+    #landing .image__container { max-width: 600px; }
+    /* Main Landing Title */
+    #landing .text__container h1 { font-size: 30pt; }
+    /* Main Landing Paragraph */
+    #landing .text__container p { font-size: 18pt; }
 }
