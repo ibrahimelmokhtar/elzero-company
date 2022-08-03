@@ -2,7 +2,6 @@
 /* *************** xs: extra small devices (phones) ******************* */
 @media only screen and (max-width: 768px) {
     /* ********* General ********* */
-    /* body { background-color: aqua; } */
     /* Root Variables */
     :root { --main-padding: 32px; --header-height: 16vh; }
     /* Main Content Container */
@@ -37,7 +36,6 @@
 /* ***************** sm: small devices (tablets) ********************** */
 @media only screen and (min-width: 768px) {
     /* ********* General ********* */
-    /* body { background-color: blanchedalmond; } */
     /* Root Variables */
     :root { --main-padding: 64px; }
     /* Main Content Container */
@@ -59,8 +57,6 @@
 }
 /* ************** md: medium devices (small laptops) ****************** */
 @media only screen and (min-width: 992px) {
-    /* ********* General ********* */
-    /* body { background-color: brown; } */
     /* ********* Header ********* */
     /* Company Logo */
     #logo a { font-size: 20pt; }
@@ -84,8 +80,6 @@
 }
 /* ************ lg: large devices (laptops and desktops) ************** */
 @media only screen and (min-width: 1200px) {
-    /* ********* General ********* */
-    /* body { background-color: chartreuse; } */
     /* ********* Header ********* */
     /* Company Logo */
     #logo a { font-size: 24pt; }
