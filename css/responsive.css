@@ -56,6 +56,20 @@
     #our__skills .image__container { display: none; }
     /* Skills Container */
     #our__skills .skills { flex-basis: 100%; }
+    /* ********* Work Steps ********* */
+    /* Skills Image Container */
+    #work__steps .content > .image__container { display: none; }
+    /* Skills Container */
+    #work__steps .steps__list { flex-basis: 100%; }
+    /* Single Work Step Container */
+    #work__steps .step__item { flex-direction: column; }
+    /* Single Work Step Image Container */
+    #work__steps .step__item .image__container { width: 120px; }
+    /* Single Work Step Text Container */
+    #work__steps .step__item .text__container { margin-left: 0; text-align: center; }
+    /* Single Work Step Title */
+    #work__steps .step__item .step__title { margin: 16px 0; }
+
 
 }
 /* ***************** sm: small devices (tablets) ********************** */
@@ -81,6 +95,19 @@
     /* ********* Team Members ********* */
     /* Team Member Description */
     #team__members .member__info .member__description { font-size: 14pt; }
+    /* ********* Work Steps ********* */
+    /* Skills Image Container */
+    #work__steps .content > .image__container { display: none; }
+    /* Skills Container */
+    #work__steps .steps__list { flex-basis: 100%; }
+    /* Single Work Step Container */
+    #work__steps .step__item { flex-direction: column; }
+    /* Single Work Step Image Container */
+    #work__steps .step__item .image__container { width: 120px; }
+    /* Single Work Step Text Container */
+    #work__steps .step__item .text__container { margin-left: 0; text-align: center; }
+    /* Single Work Step Title */
+    #work__steps .step__item .step__title { margin: 16px 0; }
 }
 /* ************** md: medium devices (small laptops) ****************** */
 @media only screen and (min-width: 992px) {
@@ -105,6 +132,19 @@
     #landing .text__container h1 { font-size: 22pt; }
     /* Main Landing Paragraph */
     #landing .text__container p { font-size: 14pt; }
+    /* ********* Work Steps ********* */
+    /* Skills Image Container */
+    #work__steps .content > .image__container { display: block; }
+    /* Skills Container */
+    #work__steps .steps__list { flex-basis: 50%; }
+    /* Single Work Step Container */
+    #work__steps .step__item { flex-direction: column; }
+    /* Single Work Step Image Container */
+    #work__steps .step__item .image__container { width: 100px; }
+    /* Single Work Step Text Container */
+    #work__steps .step__item .text__container { margin-left: 0; text-align: center; }
+    /* Single Work Step Title */
+    #work__steps .step__item .step__title { margin: 16px 0; }
 }
 /* ************ lg: large devices (laptops and desktops) ************** */
 @media only screen and (min-width: 1200px) {
@@ -124,4 +164,13 @@
     /* ********* Team Members ********* */
     /* Team Member Description */
     #team__members .member__info .member__description { font-size: 16pt; }
+    /* ********* Work Steps ********* */
+    /* Single Work Step Container */
+    #work__steps .step__item { flex-direction: row; }
+    /* Single Work Step Image Container */
+    #work__steps .step__item .image__container { width: 250px; }
+    /* Single Work Step Text Container */
+    #work__steps .step__item .text__container { margin-left: 32px; text-align: start; }
+    /* Single Work Step Title */
+    #work__steps .step__item .step__title { margin: 0; margin-bottom: 8px; }
 }

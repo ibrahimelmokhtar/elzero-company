@@ -97,7 +97,7 @@ section:nth-of-type(odd) { background-color: var(--section-color); }
 .section__title:hover::after { animation-name: moveBoth, moveRight; }
 @keyframes moveBoth {
     50% { width: var(--circle-size); height: var(--circle-size); }
-    100% { border-radius: 0; width: 100%; height: 100%; }
+    100% { border-radius: 0; width: calc(100% + 1px); height: calc(100% + 1px); }
 }
 @keyframes moveLeft {
     0% { left: var(--circle-distance); }
@@ -1036,4 +1036,72 @@ section#landing { padding: 0; }
     top: calc(-8px - 2px);
     right: 0;
     transform: translate(50%, -100%);
+}
+/* ************************** Work Steps *************************** */
+/* Main Content */
+#work__steps .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Work Steps Main Image Container */
+#work__steps .content > .image__container { flex-basis: 45%; }
+/* Work Steps Main Image */
+#work__steps img { max-width: 100%; }
+/* Work Steps Container */
+#work__steps .steps__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 50%;
+}
+/* Single Work Step Container */
+#work__steps .step__item {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 32px;
+    overflow: hidden;
+    position: relative;
+}
+#work__steps .step__item:not(:last-of-type) { margin-bottom: 24px; }
+/* Single Work Step Hover Effect */
+#work__steps .step__item::before {
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: #e6e6e6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-property: width, height;
+    transition-duration: var(--transition-duration);
+    z-index: -1;
+}
+#work__steps .step__item:hover::before { width: 150%; height: 150%; }
+/* Single Work Step Image Container */
+#work__steps .step__item .image__container { width: 250px; }
+/* Single Work Step Image */
+#work__steps .step__item .image__container img { max-width: 100%; }
+/* Single Work Step Text Container */
+#work__steps .step__item .text__container { margin-left: 32px; }
+/* Single Work Step Title */
+#work__steps .step__item .step__title {
+    color: var(--main-color);
+    font-size: 18pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+/* Single Work Step Description */
+#work__steps .step__item .step__description {
+    color: var(--secondary-text);
+    font-size: 14pt;
+    font-weight: var(--font-regular);
+    line-height: 1.6;
 }
