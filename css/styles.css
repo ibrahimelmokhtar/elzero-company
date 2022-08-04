@@ -957,3 +957,83 @@ section#landing { padding: 0; }
 #services .service__card:hover .service__details::after { border-right-color: var(--main-color); border-bottom-color: var(--main-color); }
 #services .service__card .service__details:hover::before,
 #services .service__card .service__details:hover::after { width: calc(100% - 2px); height: calc(100% - 2px); }
+/* ************************** Our Skills *************************** */
+/* Main Content */
+#our__skills .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Skills Image Container */
+#our__skills .image__container { flex-basis: 45%; }
+/* Skills Main Image */
+#our__skills img { max-width: 100%; }
+/* Skills Container */
+#our__skills .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 50%;
+}
+/* Single Skill Container */
+#our__skills .skill__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+#our__skills .skill__container:not(:last-of-type) { margin-bottom: 24px; }
+/* Skill Title */
+#our__skills .skill__title {
+    font-size: 16pt;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+/* Skill Progress Bar Container */
+#our__skills .progress__bar {
+    width: 100%;
+    height: 24px;
+    background-color: var(--section-color);
+    position: relative;
+}
+/* Actual Skill Progress */
+#our__skills .actual__progress {
+    width: var(--progress-value);
+    height: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width var(--transition-duration);
+}
+/* Actual Skill Value Arrow */
+#our__skills .actual__progress::before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-top-color: var(--section-color);
+    position: absolute;
+    top: -2px;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+/* Actual Skill Progress Value */
+#our__skills .actual__progress::after {
+    content: attr(data-progress);
+    padding: 4px 8px;
+    width: fit-content;
+    height: fit-content;
+    color: var(--main-color);
+    font-weight: var(--font-bold);
+    background-color: var(--section-color);
+    border: 1px solid var(--section-color);
+    border-radius: 8px;
+    position: absolute;
+    top: calc(-8px - 2px);
+    right: 0;
+    transform: translate(50%, -100%);
+}

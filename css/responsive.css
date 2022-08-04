@@ -49,8 +49,13 @@
     }
     /* Team Members Main Info */
     #team__members .member__info { padding: 0; text-align: center; }
-        /* Team Member Description */
-        #team__members .member__info .member__description { font-size: 14pt; }
+    /* Team Member Description */
+    #team__members .member__info .member__description { font-size: 14pt; }
+    /* ********* Our Skills ********* */
+    /* Skills Image Container */
+    #our__skills .image__container { display: none; }
+    /* Skills Container */
+    #our__skills .skills { flex-basis: 100%; }
 
 }
 /* ***************** sm: small devices (tablets) ********************** */
