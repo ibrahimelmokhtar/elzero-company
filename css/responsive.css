@@ -1,11 +1,10 @@
 /* based on Bootstrap Grid System */
 /* *************** xs: extra small devices (phones) ******************* */
 @media only screen and (max-width: 768px) {
+    /* header .container { background-color: aqua; } */
     /* ********* General ********* */
     /* Root Variables */
-    :root { --main-padding: 32px; --header-height: 16vh; }
-    /* Main Content Container */
-    .container { padding: 0 var(--main-padding); }
+    :root { --main-padding: 32px; --header-height: 16vh; --member-card-empty: 0px; }
     /* ********* Header ********* */
     header .container { flex-direction: column; height: var(--header-height); padding-top: 16px; }
     /* Company Logo */
@@ -32,14 +31,34 @@
     #landing .text__container h1 { font-size: 24pt; }
     /* Main Landing Paragraph */
     #landing .text__container p { font-size: 16pt; }
+    /* ********* Team Members ********* */
+    /* Main Content */
+    #team__members .content {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+    /* Member Card Container */
+    #team__members .member__card { padding: 16px; }
+    /* Team Member Data Container */
+    #team__members .member__data { flex-direction: column; }
+    /* Team Member Social Links Container */
+    #team__members .member__data .socials {
+        margin-top: 16px;
+        height: fit-content;
+        width: 160px;
+        flex-direction: row;
+    }
+    /* Team Members Main Info */
+    #team__members .member__info { padding: 0; text-align: center; }
+        /* Team Member Description */
+        #team__members .member__info .member__description { font-size: 14pt; }
+
 }
 /* ***************** sm: small devices (tablets) ********************** */
 @media only screen and (min-width: 768px) {
+    /* header .container { background-color: bisque; } */
     /* ********* General ********* */
     /* Root Variables */
     :root { --main-padding: 64px; }
-    /* Main Content Container */
-    .container { padding: 0 64px; }
     /* ********* Header ********* */
     /* Company Logo */
     #logo a { font-size: 18pt; }
@@ -54,9 +73,13 @@
     #landing .text__container { text-align: center; }
     /* Main Landing Image Container */
     #landing .image__container { display: none; }
+    /* ********* Team Members ********* */
+    /* Team Member Description */
+    #team__members .member__info .member__description { font-size: 14pt; }
 }
 /* ************** md: medium devices (small laptops) ****************** */
 @media only screen and (min-width: 992px) {
+    /* header .container { background-color: brown; } */
     /* ********* Header ********* */
     /* Company Logo */
     #logo a { font-size: 20pt; }
@@ -80,6 +103,7 @@
 }
 /* ************ lg: large devices (laptops and desktops) ************** */
 @media only screen and (min-width: 1200px) {
+    /* header .container { background-color: chartreuse; } */
     /* ********* Header ********* */
     /* Company Logo */
     #logo a { font-size: 24pt; }
@@ -92,4 +116,7 @@
     #landing .text__container h1 { font-size: 30pt; }
     /* Main Landing Paragraph */
     #landing .text__container p { font-size: 18pt; }
+    /* ********* Team Members ********* */
+    /* Team Member Description */
+    #team__members .member__info .member__description { font-size: 16pt; }
 }

@@ -12,6 +12,7 @@
     --star-color: #ffc107;
     --star-border: 4px;
     --star-size: 24px;
+    --member-card-empty: 64px;
     --section-padding: 96px;
     --main-padding: 64px;
     --header-height: 10vh;
@@ -438,7 +439,7 @@ section#landing { padding: 0; }
 /* Main Content */
 #gallery .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 32px;
 }
 /* Single Gallery Card Item */
@@ -481,7 +482,7 @@ section#landing { padding: 0; }
 /* Main Content */
 #features .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 32px;
 }
 /* Single Feature Card */
@@ -516,12 +517,12 @@ section#landing { padding: 0; }
     bottom: 0;
     right: 0;
     border: solid transparent;
-    border-width: 0 0 120px 500px;
+    border-width: 0 0 120px 800px;
     border-bottom-color: #ffffff;
     transition: border-width var(--transition-duration);
 }
 /* Image Skewed Background Shape Hover Effect */
-#features .feature__card:hover .image__container::after { border-width: 0 500px 120px 0; }
+#features .feature__card:hover .image__container::after { border-width: 0 800px 120px 0; }
 /* Main Feature Image */
 #features .image__container img { max-width: 100%; }
 /* Feature Main Text Container */
@@ -601,7 +602,7 @@ section#landing { padding: 0; }
 /* Main Content */
 #testimonials .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 64px 32px;
 }
 /* Testimonial Card Container */
@@ -713,7 +714,7 @@ section#landing { padding: 0; }
     height: 100%;
     background-color: var(--star-color);
     animation: calc(var(--transition-duration) / 2) linear alternate forwards;
-    animation-delay: calc( var(--i) * (var(--transition-duration) / 2));
+    animation-delay: calc( (var(--i) - 1) * (var(--transition-duration) / 2));
 }
 /* Full Star Type Fill Effect */
 #testimonials .client__rating .star.full__star::before { animation-name: fullStar; }
@@ -732,4 +733,109 @@ section#landing { padding: 0; }
     color: var(--secondary-text);
     font-size: 12pt;
     line-height: 1.6;
+}
+/* ************************** Team Members *************************** */
+/* Main Content */
+#team__members .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+}
+/* Member Card Container */
+#team__members .member__card {
+    background-color: transparent;
+    border-radius: 16px;
+    padding: 64px 0 16px;
+    overflow: hidden;
+    position: relative;
+}
+/* Main Visible Container And Main Hover Container */
+#team__members .member__card::before,
+#team__members .member__card::after {
+    content: '';
+    height: 100%;
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* Main Visible Container */
+#team__members .member__card::before {
+    width: calc(100% - var(--member-card-empty));
+    background-color: var(--section-color);
+    z-index: -2;
+}
+/* Main Hover Container */
+#team__members .member__card::after {
+    width: 0;
+    background-color: #e4e4e4;
+    transition: width var(--transition-duration);
+    z-index: -1;
+}
+/* Main Hover Container Hover Effect */
+#team__members .member__card:hover::after { width: calc(100% - var(--member-card-empty)); }
+/* Team Member Data Container */
+#team__members .member__data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Team Member Image */
+#team__members .member__data img {
+    max-width: calc(100% - var(--member-card-empty));
+    border-radius: 16px;
+    transition: filter var(--transition-duration);
+}
+/* Team Member Image Hover Effect */
+#team__members .member__card:hover img {
+    filter: grayscale(100%);
+}
+/* Team Member Social Links Container */
+#team__members .member__data .socials {
+    width: 64px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Team Member Social Links */
+#team__members .socials a * {
+    font-size: 16pt;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-text);
+    transition: color var(--transition-duration);
+}
+/* Team Member Social Links Hover Effect */
+#team__members .socials a:hover * { color: var(--icon-color); }
+/* Team Members Main Info */
+#team__members .member__info {
+    margin-left: var(--member-card-empty);
+    margin-top: 16px;
+    padding: 0 16px;
+}
+/* Team Member Full Name */
+#team__members .member__info .member__name {
+    color: var(--main-color);
+    font-size: 20pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    transition: color var(--transition-duration);
+}
+/* Team Members Full Name Hover Effect */
+#team__members .member__card:hover .member__name {
+    color: var(--secondary-text);
+}
+/* Team Member Description */
+#team__members .member__info .member__description {
+    font-size: 16pt;
+    font-weight: var(--font-regular);
+    text-transform: capitalize;
+    color: var(--secondary-text);
 }
