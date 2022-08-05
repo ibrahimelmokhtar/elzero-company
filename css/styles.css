@@ -56,6 +56,17 @@ section:nth-of-type(odd) { background-color: var(--section-color); }
     background-position: 0 0;
     z-index: 1;
 }
+/* Section Background Dots */
+.dots {
+    background-image: url('../assets/images/dots.webp');
+    background-repeat: no-repeat;
+    width: 204px;
+    height: 186px;
+    position: absolute;
+    z-index: -1;
+}
+.dots__right { top: 200px; right: 0; }
+.dots__left { bottom: 200px; left: 0; }
 /* Main Section Title */
 .section__title {
     text-transform: uppercase;
@@ -1116,7 +1127,7 @@ section#landing { padding: 0; }
 /* Events Main Image Container */
 #events .image__container { max-width: 400px; margin-right: 32px; }
 /* Events Main Image */
-#events .image__container img { max-width: 100%; }
+#events .image__container img { max-width: 100%; background-color: #ffffff; }
 /* Events Main Text Container */
 #events .text__container { flex: 1; text-align: center; }
 /* Events Date Container */
@@ -1169,6 +1180,7 @@ section#landing { padding: 0; }
 /* Events Main Paragraph */
 #events .text__container .events__paragraph {
     color: var(--secondary-text);
+    background-color: #ffffff;
     font-weight: var(--font-regular);
     line-height: 1.6;
 }
@@ -1235,4 +1247,149 @@ section#landing { padding: 0; }
 @keyframes button {
     from { transform: scale(1); }
     to { transform: scale(0.9); }
+}
+/* ************************** Pricing Plans *************************** */
+/* Main Content */
+#pricing__plans .content .plans__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 32px;
+}
+/* Single Plan Container */
+#pricing__plans .plan {
+    background-color: #ffffff;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+}
+/* Plan Container Top Tag Ribbon */
+#pricing__plans .plan .ribbon {
+    font-size: 14pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+    padding: 8px 8px 24px;
+    width: 32px;
+    color: #ffffff;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    writing-mode: vertical-lr;
+    z-index: 1;
+}
+#pricing__plans .plan .ribbon::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-bottom-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: border-color var(--transition-duration);
+}
+#pricing__plans .plan:hover .ribbon::before { border-bottom-color: var(--hover-color); }
+/* Single Plan Hover Effect Containers */
+#pricing__plans .plan::before,
+#pricing__plans .plan::after {
+    content: '';
+    background-color: var(--hover-color);
+    position: absolute;
+    width: 0;
+    height: 50%;
+    transition: width var(--transition-duration);
+    z-index: -1;
+}
+#pricing__plans .plan::before { top: 0; left: 0; }
+#pricing__plans .plan::after { bottom: 0; right: 0; }
+/* Single Plan Hover Effect */
+#pricing__plans .plan:hover::before,
+#pricing__plans .plan:hover::after { width: 100%; }
+/* Single Plan Main Title */
+#pricing__plans .plan .plan__title {
+    text-align: center;
+    font-size: 18pt;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+}
+/* Single Plan Main Image */
+#pricing__plans .plan img { max-width: 80px; margin: 16px 0; }
+/*  */
+#pricing__plans .plan .plan__price {
+    font-size: 40pt;
+    font-weight: var(--font-bold);
+    color: var(--main-color);
+    position: relative;
+}
+#pricing__plans .plan .plan__price::before {
+    content: '\24';
+    font-family: 'FontAwesome';
+    font-size: 30pt;
+    font-weight: var(--font-bold);
+    color: var(--main-color);
+    position: relative;
+}
+#pricing__plans .plan .plan__period {
+    color: var(--secondary-text);
+    text-transform: capitalize;
+    font-size: 14pt;
+    font-weight: var(--font-regular);
+    margin: 8px 0 16px;
+}
+/* Single Plan Details Container */
+#pricing__plans .plan .plan__details {
+    width: 100%;
+    margin: 16px 0 32px;
+}
+/* Single Plan Detail */
+#pricing__plans .plan .plan__details li {
+    font-size: 14pt;
+    font-weight: var(--font-regular);
+    text-transform: capitalize;
+    padding: 16px;
+    border-top: 1px solid #dddddd;
+    position: relative;
+}
+/* Single Plan Detail List Icon */
+#pricing__plans .plan .plan__details li::before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    color: var(--main-color);
+    font-size: 12pt;
+    padding-right: 16px;
+    position: relative;
+}
+/* Plan Details Changeable Content  */
+#pricing__plans .plan .plan__details li span { font-weight: var(--font-bold); }
+/* Action Button Container */
+#pricing__plans .plan button {
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Action Button Link */
+#pricing__plans .plan button a {
+    border: 2px solid var(--main-color);
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 12pt;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    transition-property: color, background-color;
+    transition-duration: var(--transition-duration);
+}
+/* Action Button Hover Effect */
+#pricing__plans .plan button:hover a {
+    color: #ffffff;
+    background-color: var(--main-color);
 }

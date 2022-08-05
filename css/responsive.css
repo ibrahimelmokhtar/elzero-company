@@ -151,6 +151,9 @@
     #work__steps .step__item .text__container { margin-left: 0; text-align: center; }
     /* Single Work Step Title */
     #work__steps .step__item .step__title { margin: 16px 0; }
+    /* ********* Pricing Plans ********* */
+    /* Single Plan Container */
+    #pricing__plans .plan:nth-child(2) { transform: translate(0, -24px); }
 }
 /* ************ lg: large devices (laptops and desktops) ************** */
 @media only screen and (min-width: 1200px) {
