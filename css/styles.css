@@ -1105,3 +1105,134 @@ section#landing { padding: 0; }
     font-weight: var(--font-regular);
     line-height: 1.6;
 }
+/* ************************** Events *************************** */
+/* Main Content */
+#events .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* Events Main Image Container */
+#events .image__container { max-width: 400px; margin-right: 32px; }
+/* Events Main Image */
+#events .image__container img { max-width: 100%; }
+/* Events Main Text Container */
+#events .text__container { flex: 1; text-align: center; }
+/* Events Date Container */
+#events .date__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Single Date Part Container */
+#events .date__container .date__part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    width: 80px;
+    box-shadow: 0 4px 8px var(--section-color);
+    transition: border-color var(--transition-duration);
+}
+#events .date__container .date__part:not(:last-of-type) { margin-right: 16px; }
+/* Single Date Part Container Hover Effect */
+#events .date__container .date__part:hover { border-color: var(--main-color); }
+/* Events Main Date Number */
+#events .date__container .date__number {
+    font-size: 26pt;
+    font-weight: var(--font-bold);
+    color: var(--main-color);
+    padding: 24px 16px;
+}
+/* Events Main Date Title */
+#events .date__part .date__title {
+    font-size: 12pt;
+    font-weight: var(--font-regular);
+    text-transform: capitalize;
+    padding: 8px 0;
+    border-top: 2px solid #000000;
+    width: 100%;
+    text-align: center;
+    transition: border-top-color var(--transition-duration);
+}
+#events .date__part:hover .date__title { border-top-color: var(--main-color); }
+/* Events Main Title */
+#events .text__container .events__title {
+    margin: 32px 0 16px;
+    font-size: 20pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+}
+/* Events Main Paragraph */
+#events .text__container .events__paragraph {
+    color: var(--secondary-text);
+    font-weight: var(--font-regular);
+    line-height: 1.6;
+}
+/* Events Main Form Container */
+#events .form__container {
+    width: 100%;
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Events Main Form */
+#events form {
+    width: 600px;
+    padding: 32px 40px;
+    border-radius: 100px;
+    background-color: var(--section-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+/* Single Input Field Container */
+#events .input__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#events .input__container:not(:last-of-type) { flex: 1; }
+/* Events Main Form Input Fields */
+#events .input__container input {
+    border: 2px solid transparent;
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+/* Events Main Form Input Placeholder */
+#events .input__container input[type="email"]::placeholder {
+    color: var(--secondary-text);
+    font-size: 12pt;
+    font-weight: var(--font-bold);
+    transition: opacity var(--transition-duration);
+}
+/* Events Main Form Email Field Focus Effect */
+#events .input__container input[type="email"]:focus {
+    border: 2px solid var(--main-color);
+    outline: none;
+    caret-color: var(--main-color);
+}
+#events .input__container input[type="email"]:focus::placeholder { opacity: 0; }
+/* Events Main Form Submit Button */
+#events .input__container input[type="submit"] {
+    background-color: var(--main-color);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: var(--font-bold);
+}
+/* Events Form Submit Button Hover Effect */
+#events .input__container input[type="submit"]:hover {
+    cursor: pointer;
+    animation: button calc(2 * var(--transition-duration)) linear alternate infinite;
+}
+@keyframes button {
+    from { transform: scale(1); }
+    to { transform: scale(0.9); }
+}

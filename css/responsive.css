@@ -69,8 +69,14 @@
     #work__steps .step__item .text__container { margin-left: 0; text-align: center; }
     /* Single Work Step Title */
     #work__steps .step__item .step__title { margin: 16px 0; }
-
-
+    /* ********* Events ********* */
+    /* Events Main Image Container */
+    #events .image__container { margin-right: 0; margin-bottom: 32px; }
+    /* Events Main Form */
+    #events form { flex-direction: column; gap: 8px; border-radius: 16px; padding: 16px; }
+    #events .input__container:not(:last-of-type) { width: 100%; margin-right: 0; margin-bottom: 16px; }
+    /* Events Main Form Input Fields */
+    #events .input__container input[type="email"] { border-radius: 16px; }
 }
 /* ***************** sm: small devices (tablets) ********************** */
 @media only screen and (min-width: 768px) {
