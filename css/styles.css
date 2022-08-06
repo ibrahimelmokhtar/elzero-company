@@ -1322,7 +1322,7 @@ section#landing { padding: 0; }
 }
 /* Single Plan Main Image */
 #pricing__plans .plan img { max-width: 80px; margin: 16px 0; }
-/*  */
+/* Single Plan Price */
 #pricing__plans .plan .plan__price {
     font-size: 40pt;
     font-weight: var(--font-bold);
@@ -1518,4 +1518,85 @@ section#landing { padding: 0; }
     padding-left: 16px;
     font-size: 16pt;
     font-weight: var(--font-bold);
+}
+/* ************************** Statistics *************************** */
+/* Main Background */
+#statistics {
+    background-image: url('../assets/images/stats.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Overlay Background */
+#statistics::before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* Section Main Title */
+#statistics h2 {
+    text-transform: capitalize;
+    font-size: 24pt;
+    font-weight: var(--font-bold);
+    width: fit-content;
+    padding: 8px 16px;
+    margin: 40px auto 80px;
+}
+/* Main Content Container */
+#statistics .content .stats__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px;
+}
+/* Single Statistics Card */
+#statistics .stats__card {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color var(--transition-duration);
+    position: relative;
+}
+/* Single Statistics Card Hover Effects */
+#statistics .stats__card:hover { background-color: rgba(255, 255, 255, 1); }
+#statistics .stats__card::before,
+#statistics .stats__card::after {
+    content: '';
+    background-color: var(--main-color);
+    width: 2px;
+    height: 0;
+    transition: height var(--transition-duration);
+    position: absolute;
+    z-index: 1;
+}
+#statistics .stats__card::before { bottom: 0; left: 0; }
+#statistics .stats__card::after { top: 0; right: 0; }
+#statistics .stats__card:hover::before,
+#statistics .stats__card:hover::after { height: 100%; }
+/* Main Statistics Card Icon */
+#statistics .stats__icon {
+    font-size: 30pt;
+    transition: color var(--transition-duration);
+}
+/* Main Statistics Card Icon Hover Effect */
+#statistics .stats__card:hover .stats__icon { color: var(--main-color); }
+/* Main Statistics Card Number */
+#statistics .stats__number {
+    font-size: 36pt;
+    font-weight: var(--font-bold);
+    margin: 16px 0;
+}
+/* Main Statistics Card Title */
+#statistics .stats__title {
+    font-size: 16pt;
+    font-weight: var(--font-bold);
+    font-style: italic;
+    color: var(--main-color);
 }
