@@ -1143,6 +1143,7 @@ section#landing { padding: 0; }
     justify-content: space-between;
     align-items: center;
     border: 2px solid #000000;
+    background-color: #ffffff;
     border-radius: 8px;
     width: 80px;
     box-shadow: 0 4px 8px var(--section-color);
@@ -1392,4 +1393,129 @@ section#landing { padding: 0; }
 #pricing__plans .plan button:hover a {
     color: #ffffff;
     background-color: var(--main-color);
+}
+/* ************************** Top Videos *************************** */
+/* Main Content */
+#videos .content {
+    display: flex;
+    justify-content: center;
+}
+/* Side Container */
+#videos .side__container {
+    min-width: 300px;
+    border: 1px solid var(--secondary-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* Side Container Main Heading */
+#videos .side__container .heading__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--secondary-text);
+}
+/* Main Heading Title */
+#videos .heading__container .main__title {
+    font-size: 14pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+    color: #ffffff;
+}
+/* Main Heading Icon */
+#videos .heading__container .main__icon {
+    font-size: 12pt;
+    transition: color var(--transition-duration);
+    color: #ffffff;
+}
+#videos .heading__container .main__icon:hover { cursor: pointer; color: var(--main-color); }
+/* Videos List Container */
+#videos .videos__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Single Video Item Container */
+#videos .video__item {
+    padding: 8px 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid var(--secondary-text);
+    position: relative;
+    transition-property: color, background-color;
+    transition-duration: var(--transition-duration);
+}
+#videos .video__item.active,
+#videos .video__item:hover {
+    background-color: var(--section-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+/* Single Video Item Title */
+#videos .video__item .video__title {
+    flex: 1;
+    margin-bottom: 8px;
+    font-size: 13pt;
+    font-weight: var(--font-regular);
+    text-transform: capitalize;
+    transition: color var(--transition-duration);
+}
+/* Single Video Item Title Hover Effect */
+#videos .video__item.active .video__title,
+#videos .video__item:hover .video__title { color: var(--main-color); }
+/* Single Video Item Period */
+#videos .video__item .video__period {
+    font-size: 11pt;
+    color: var(--secondary-text);
+    font-weight: var(--font-bold);
+    transition: color var(--transition-duration);
+}
+/* Single Video Item Title Hover Effect */
+#videos .video__item.active .video__period,
+#videos .video__item:hover .video__period { color: var(--main-color); }
+/* Current Video Preview Container */
+#videos .current__video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-color);
+    border: 16px solid var(--section-color);
+}
+/* Current Preview Main Image */
+#videos .current__video img { max-width: 100%; }
+/* Current Video Text Container */
+#videos .current__video .text__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    background-color: var(--section-color);
+}
+/* Current Video Main Icon */
+#videos .current__video .video__icon {
+    padding-right: 32px;
+    font-size: 14pt;
+}
+/* Current Video Main Title */
+#videos .current__video .current__title {
+    flex: 1;
+    font-size: 16pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+}
+/* Current Video Main Period */
+#videos .current__video .current__period {
+    padding-left: 16px;
+    font-size: 16pt;
+    font-weight: var(--font-bold);
 }
