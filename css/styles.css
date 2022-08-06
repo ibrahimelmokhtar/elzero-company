@@ -1600,3 +1600,128 @@ section#landing { padding: 0; }
     font-style: italic;
     color: var(--main-color);
 }
+/* ************************** Discount *************************** */
+/* Discount Main Containers */
+#discount { padding: 0; }
+#discount .container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#discount .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 50%;
+    padding: var(--main-padding) 0;
+}
+/* Sub-Section All Elements Except Main Title */
+#discount .content > *:not([class="title"]) { padding: 0 var(--main-padding); }
+/* Sub-Section Main Title */
+#discount .content .title {
+    padding: 0 16px;
+    font-size: 30pt;
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+    margin-bottom: 32px;
+}
+/* Sub-Section Main Container */
+#discount .image__container {
+    background-color: var(--main-color);
+    text-align: center;
+    background-image: url('../assets/images/discount-background1.webp');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation: changeBackground 5s linear alternate infinite;
+}
+@keyframes changeBackground {
+    from { background-image: url('../assets/images/discount-background1.webp'); }
+    to { background-image: url('../assets/images/discount-background2.webp'); }
+}
+/* Overlay Background */
+#discount .image__container::before {
+    content: '';
+    background-color: rgb(33, 150, 243, 0.96);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Sub-Section Main Title */
+#discount .image__container .title { color: #ffffff; position: relative; }
+/* Discount Main Paragraph */
+#discount .image__container p {
+    color: #ffffff;
+    font-size: 14pt;
+    font-weight: var(--font-regular);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    padding: 0 var(--main-padding);
+    position: relative;
+}
+/* Discount Main Image */
+#discount .image__container img {
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+}
+/* Discount Form Container */
+#discount .form__container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+/* Single Input Field Container */
+#discount .input__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#discount input,
+#discount textarea {
+    background-color: var(--section-color);
+    border: none;
+    border-bottom: 2px solid var(--secondary-text);
+    padding: 16px;
+}
+/* Form Input Fields - Inputs */
+#discount input:not([type="submit"]) { width: 100%; margin-bottom: 16px; }
+/* Form Input Fields - Textarea */
+#discount textarea { width: 100%; height: 200px; resize: none; }
+/* Form Input Fields - Submit */
+#discount input[type="submit"] {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: #ffffff;
+    font-size: 18pt;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    padding: 8px 32px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+/* Form Input Placeholder */
+#discount input::placeholder,
+#discount textarea::placeholder {
+    text-transform: capitalize;
+    opacity: 1;
+    transition: opacity var(--transition-duration);
+}
+/* Form Input Focus Effects */
+#discount input:focus,
+#discount textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+    caret-color: var(--main-color);
+}
+#discount input:focus::placeholder,
+#discount textarea:focus::placeholder { opacity: 0; }

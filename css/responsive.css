@@ -94,7 +94,13 @@
     #videos .current__video .current__title { font-size: 13pt; }
     /* Current Video Main Period */
     #videos .current__video .current__period { padding-left: 16px; font-size: 12pt; }
-
+    /* ********* Discount ********* */
+    /* Discount Main Containers */
+    #discount .content { flex-basis: 100%; }
+    /* Sub-Section Main Title */
+    #discount .content .title { font-size: 26pt; }
+    /* Form Input Fields - Submit */
+    #discount input[type="submit"] { font-size: 16pt; }
 }
 /* ***************** sm: small devices (tablets) ********************** */
 @media only screen and (min-width: 768px) {
@@ -143,6 +149,9 @@
     #videos .video__item .video__title { margin-bottom: 0; }
     /* Single Video Item Period */
     #videos .video__item .video__period { padding-left: 16px; }
+    /* ********* Discount ********* */
+    /* Sub-Section Main Title */
+    #discount .content .title { font-size: 24pt; }
 }
 /* ************** md: medium devices (small laptops) ****************** */
 @media only screen and (min-width: 992px) {
@@ -196,6 +205,12 @@
     #videos .video__item .video__period { padding-left: 0; }
     /* Current Video Main Title */
     #videos .current__video .current__title { font-size: 14pt; }
+    /* ********* Discount ********* */
+    /* Sub-Section Main Title */
+    #discount .content .title { font-size: 30pt; }
+    /* ********* Discount ********* */
+    /* Sub-Section Main Title */
+    #discount .content .title { font-size: 30pt; }
 }
 /* ************ lg: large devices (laptops and desktops) ************** */
 @media only screen and (min-width: 1200px) {
