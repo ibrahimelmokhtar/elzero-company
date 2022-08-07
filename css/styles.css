@@ -1,7 +1,3 @@
-/*  Google Fonts: Cairo
-    light: 300, Regular: 400, Bold: 700
- */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
 /* ************************** General Rules *************************** */
 /* Root Variables */
 :root {
@@ -58,7 +54,7 @@ section:nth-of-type(odd) { background-color: var(--section-color); }
 }
 /* Section Background Dots */
 .dots {
-    background-image: url('../assets/images/dots.webp');
+    background-image: url('../build/assets/images/dots.webp');
     background-repeat: no-repeat;
     width: 204px;
     height: 186px;
@@ -1336,7 +1332,8 @@ section#landing { padding: 0; }
 }
 #pricing__plans .plan .plan__price::before {
     content: '\24';
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     font-size: 30pt;
     font-weight: var(--font-bold);
     color: var(--main-color);
@@ -1366,7 +1363,8 @@ section#landing { padding: 0; }
 /* Single Plan Detail List Icon */
 #pricing__plans .plan .plan__details li::before {
     content: '\f00c';
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     color: var(--main-color);
     font-size: 12pt;
     padding-right: 16px;
@@ -1525,7 +1523,7 @@ section#landing { padding: 0; }
 /* ************************** Statistics *************************** */
 /* Main Background */
 #statistics {
-    background-image: url('../assets/images/stats.webp');
+    background-image: url('../build/assets/images/stats.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1634,7 +1632,7 @@ section#landing { padding: 0; }
 #discount .image__container {
     background-color: var(--main-color);
     text-align: center;
-    background-image: url('../assets/images/discount-background1.webp');
+    background-image: url('../build/assets/images/discount-background1.webp');
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1642,8 +1640,8 @@ section#landing { padding: 0; }
     animation: changeBackground 5s linear alternate infinite;
 }
 @keyframes changeBackground {
-    from { background-image: url('../assets/images/discount-background1.webp'); }
-    to { background-image: url('../assets/images/discount-background2.webp'); }
+    from { background-image: url('../build/assets/images/discount-background1.webp'); }
+    to { background-image: url('../build/assets/images/discount-background2.webp'); }
 }
 /* Overlay Background */
 #discount .image__container::before {
@@ -1808,7 +1806,8 @@ footer .content .important__links li:hover a { padding-left: 16px; color: #fffff
 /* Single Important Link Icon */
 footer .content .important__links li a::before {
     content: '\f101';
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     position: relative;
     margin-right: 8px;
     color: var(--main-color);

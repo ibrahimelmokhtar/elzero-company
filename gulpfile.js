@@ -1,9 +1,6 @@
 // Import Dependencies:
 import gulp from 'gulp';
 import imagewebp from 'gulp-webp';
-import { deleteAsync } from 'del';
-import minify from 'gulp-clean-css';
-import rename from 'gulp-rename';
 
 /**
  * @description Convert (.png, .jpg) Images Into (.webp) Images.
@@ -11,29 +8,11 @@ import rename from 'gulp-rename';
 const convertImages = () => {
     return gulp.src('assets/**/*.{png,jpg}')
             .pipe(imagewebp())
-            .pipe(gulp.dest('assets'));
+            .pipe(gulp.dest('build/assets'));
 };
+gulp.task('convertImages', convertImages);
 
-/**
- * @description Delete (.png, .jpg) Images.
- */
-const deleteImages = async () => {
-    return await deleteAsync(['assets/**/*.{png,jpg}']);
-};
-
-/**
- * @description Minify CSS Files.
- */
-const minifyStyles = () => {
-    return gulp.src(['css/*.css', '!css/*.min.css'])
-            .pipe(minify({}))
-            .pipe(rename({ suffix: '.min' }))
-            .pipe(gulp.dest('css'));
-};
-
-// Main Sequence:
-export default gulp.series(
-    convertImages,
-    deleteImages,
-    minifyStyles,
-);
+// Watch Created Tasks:
+gulp.task('watch', () => {
+    gulp.watch([ 'assets', '!assets/fonts'], gulp.series('convertImages'));
+});
