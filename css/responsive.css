@@ -215,7 +215,7 @@
     /* Single Video Item Container */
     #videos .video__item { flex-direction: column; padding: 8px 16px; }
     /* Single Video Item Title */
-    #videos .video__item .video__title { margin-bottom: 8px; }
+    #videos .video__item .video__title { margin-bottom: 16px; }
     /* Single Video Item Period */
     #videos .video__item .video__period { padding-left: 0; }
     /* Current Video Main Title */
