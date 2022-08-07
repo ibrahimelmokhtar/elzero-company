@@ -3,6 +3,7 @@ import gulp from 'gulp';
 import imagewebp from 'gulp-webp';
 import { deleteAsync } from 'del';
 import minify from 'gulp-clean-css';
+import rename from 'gulp-rename';
 
 /**
  * @description Convert (.png, .jpg) Images Into (.webp) Images.
@@ -24,8 +25,9 @@ const deleteImages = async () => {
  * @description Minify CSS Files.
  */
 const minifyStyles = () => {
-    return gulp.src('css/normalize.css')
-            .pipe(minify())
+    return gulp.src(['css/*.css', '!css/*.min.css'])
+            .pipe(minify({}))
+            .pipe(rename({ suffix: '.min' }))
             .pipe(gulp.dest('css'));
 };
 
