@@ -101,6 +101,21 @@
     #discount .content .title { font-size: 26pt; }
     /* Form Input Fields - Submit */
     #discount input[type="submit"] { font-size: 16pt; }
+    /* ********* Footer ********* */
+    /* Footer Actual Content Container */
+    footer .content { text-align: center; }
+    /* Social Media Links Container */
+    footer .content .socials { justify-content: center; }
+    /* Important Links Container */
+    footer .content .important__links {  align-items: center; }
+    /* Single Contact Container */
+    footer .content .contacts > li { flex-direction: column; }
+    /* Single Contact Main Icon */
+    footer .content .contacts li .contact__icon { margin-right: 0; margin-bottom: 16px; }
+    /* Footer Images Container */
+    footer .content .images { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+    /* Credit Author */
+    footer .credit span { display: block; line-height: 1.6; }
 }
 /* ***************** sm: small devices (tablets) ********************** */
 @media only screen and (min-width: 768px) {

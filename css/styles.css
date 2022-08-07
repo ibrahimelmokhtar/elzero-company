@@ -1725,3 +1725,153 @@ section#landing { padding: 0; }
 }
 #discount input:focus::placeholder,
 #discount textarea:focus::placeholder { opacity: 0; }
+/* ************************** Footer *************************** */
+/* Main Content Container */
+footer .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191919;
+    color: #ffffff;
+}
+/* Footer Actual Content Container */
+footer .content {
+    width: 100%;
+    padding: 64px var(--main-padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px;
+}
+footer .content * { color: #b9b9b9; }
+/* Footer Main Title */
+footer .content .title {
+    font-size: 26pt;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    color: #ffffff;
+}
+/* Social Media Links Container */
+footer .content .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 24px 0;
+}
+/* Single Social Media Account Link */
+footer .content .socials li {
+    background-color: #313131;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transition-duration);
+}
+footer .content .socials li * { color: #b9b9b9; font-size: 20pt; }
+footer .content .socials li:not(:last-of-type) { margin-right: 16px; }
+/* Social Media Account Hover Effect */
+footer .content .socials li:hover { cursor: pointer; background-color: var(--icon-color); }
+/* Footer Main Description */
+footer .content .description {
+    font-size: 14pt;
+    line-height: 1.6;
+}
+/* Important Links Container */
+footer .content .important__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Single Important Link Container */
+footer .content .important__links li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+footer .content .important__links li:not(:last-of-type) { border-bottom: 1px solid var(--section-color); }
+/* Single Important Link */
+footer .content .important__links li a {
+    padding: 16px 0;
+    flex: 1;
+    text-transform: capitalize;
+    transition-property: padding-left, color;
+    transition-duration: var(--transition-duration);
+}
+/* Single Important Link Hover Effect */
+footer .content .important__links li:hover a { padding-left: 16px; color: #ffffff; }
+/* Single Important Link Icon */
+footer .content .important__links li a::before {
+    content: '\f101';
+    font-family: 'FontAwesome';
+    position: relative;
+    margin-right: 8px;
+    color: var(--main-color);
+}
+/* Single Contact Container */
+footer .content .contacts > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .content .contacts > li:not(:last-of-type) { margin-bottom: 24px; }
+/* Single Contact Main Icon */
+footer .content .contacts li .contact__icon {
+    font-size: 20pt;
+    color: var(--main-color);
+    margin-right: 16px;
+}
+/* Single Contact Main Info */
+footer .content .contacts > li *:not(:first-child) {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 12pt;
+    text-transform: capitalize;
+}
+/* Footer Images Container */
+footer .content .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+}
+/* Single Image Container */
+footer .content .images li { position: relative; }
+/* Single Image Container Overlay Background */
+footer .content .images li::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color var(--transition-duration);
+}
+/* Single Image Container Hover Effect */
+footer .content .images li:hover::before { background-color: rgba(0, 0, 0, 0); }
+/* Single Footer Image */
+footer .content .images img {
+    max-width: 100%;
+    border: 4px solid #ffffff;
+}
+/* Footer Bottom Credit Quote */
+footer .credit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: var(--font-regular);
+    text-transform: capitalize;
+    padding: 16px var(--main-padding);
+    border-top: 1px solid var(--section-color);
+}
+/* Single Credit Quote */
+footer .credit div { color: #b9b9b9; }
+/* Credit Icon */
+footer .credit i { color: #ff0000; }
+/* Credit Author */
+footer .credit span { color: var(--main-color); font-weight: var(--font-bold); }
