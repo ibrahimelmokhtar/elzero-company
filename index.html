@@ -8,20 +8,23 @@
     <meta name="description" content="Convert a PSD mockup design into a responsive website">
     <meta name="keywords" content="HTML5, CSS3, JavaScript, Company Website, Mockup Design to HTML">
     <meta name="author" content="Ibrahim El-Mokhtar">
+
     <!-- Browser Tab details -->
     <title>Elzero Company</title>
     <link rel="icon" href="build/assets/icons/man.webp" type="image/webp">
-    <!-- FontAwesome Library - v6.1.1 -->
-    <link rel="preload" media="all" href="build/plugins/fontawesome-6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="build/plugins/fontawesome-6.1.1/css/all.min.css"></noscript>
-    <!-- Used Google Fonts -->
+
+    <!-- Preload Assets -->
+        <!-- Preload Styles -->
+    <link rel="preload" href="build/plugins/fontawesome-6.1.1/css/all.min.css" as="style" media="all">
+    <link rel="preload" href="build/css/normalize.min.css" as="style" media="all">
+    <link rel="preload" href="build/css/styles.min.css" as="style" media="all">
+    <link rel="preload" href="build/css/responsive.min.css" as="style" media="all">
         <!-- Preload Fonts -->
     <link rel="preload" href="assets/fonts/Cairo-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Cairo-Light.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="assets/fonts/Cairo-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Cairo-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="assets/fonts/Cairo-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Cairo-Bold.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Used Google Fonts -->
     <style>
         /* Cairo - Light */
         @font-face {
@@ -48,18 +51,24 @@
             font-display: swap;
         }
     </style>
-    <!-- Used stylesheets -->
+
+    <!-- Used Stylesheets -->
+        <!-- FontAwesome Library - v6.1.1 -->
+    <link rel="stylesheet" href="build/plugins/fontawesome-6.1.1/css/all.min.css" media="all">
         <!-- Normalize Styles -->
-    <link rel="preload" media="all" href="build/css/normalize.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link media="all" rel="stylesheet" href="build/css/normalize.min.css"></noscript>
+    <link rel="stylesheet" href="build/css/normalize.min.css" media="all">
         <!-- Main Styles -->
-    <link rel="preload" media="all" href="build/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link media="all" rel="stylesheet" href="build/css/styles.min.css"></noscript>
+    <link rel="stylesheet" href="build/css/styles.min.css" media="all">
         <!-- Responsive Styles -->
-    <link rel="preload" media="all" href="build/css/responsive.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link media="all" rel="stylesheet" href="build/css/responsive.min.css"></noscript>
+    <link rel="stylesheet" href="build/css/responsive.min.css" media="all">
+
+    <!-- Prefetch Assets -->
+        <!-- Prefetch Fonts -->
+    <link rel="prefetch" href="assets/fonts/Cairo-Light.woff" as="font" type="font/woff" crossorigin>
+    <link rel="prefetch" href="assets/fonts/Cairo-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="prefetch" href="assets/fonts/Cairo-Bold.woff" as="font" type="font/woff" crossorigin>
 </head>
-<body style="min-height: calc(23 * 100vh);">
+<body style="min-height: calc(22 * 100vh);">
     <!-- Header Section -->
     <header id="header">
         <!-- Section Container -->
@@ -112,7 +121,7 @@
             </div>
             <!-- Main Landing Image -->
             <div class="image__container">
-                <img src="build/assets/images/landing-image.webp" alt="Landing Image" type="image/webp" width="1200" height="757">
+                <img fetchpriority="high" src="build/assets/images/landing-image.webp" alt="Landing Image" type="image/webp" width="1200" height="757">
             </div>
             <!-- Scroll Down Icon -->
             <a href="#articles" title="Go To Articles Section"><i class="fa-solid fa-angles-down scroll__icon"></i></a>
@@ -825,64 +834,61 @@
             <!-- Main Title -->
             <h2 class="section__title">Pricing Plans</h2>
             <!-- Section Content -->
-            <div class="content">
-                <!-- Plans Container -->
-                <ul class="plans__container">
-                    <!-- Single Plan Container -->
-                    <!-- Plan #1 -->
-                    <li class="plan">
-                        <!-- Plan Title -->
-                        <h3 class="plan__title">Basic</h3>
-                        <!-- Plan Image -->
-                        <img src="build/assets/images/hosting-basic.webp" alt="Pricing Plan Image" type="image/webp" loading="lazy" width="256" height="256" class="plan__icon">
-                        <!-- Plan Price -->
-                        <h4 class="plan__price">15</h4>
-                        <p class="plan__period">Per Month</p>
-                        <!-- Plan Details -->
-                        <ul class="plan__details">
-                            <li><span>10GB</span> HDD Space</li>
-                            <li><span>5</span> Email Addresses</li>
-                            <li><span>2</span> Subdomains</li>
-                            <li><span>4</span> Databases</li>
-                            <li><span>Basic</span> Support</li>
-                        </ul>
-                        <!-- Plan Main Action Button -->
-                        <button><a href="#pricing__plans">Choose Plan</a></button>
-                    </li>
-                    <!-- Plan #2 -->
-                    <li class="plan">
-                        <!-- Top Ribbon -->
-                        <div class="ribbon">Most Popular</div>
-                        <h3 class="plan__title">Advanced</h3>
-                        <img src="build/assets/images/hosting-advanced.webp" alt="Pricing Plan Image" type="image/webp" loading="lazy" width="256" height="256" class="plan__icon">
-                        <h4 class="plan__price">25</h4>
-                        <p class="plan__period">Per Month</p>
-                        <ul class="plan__details">
-                            <li><span>20GB</span> HDD Space</li>
-                            <li><span>10</span> Email Addresses</li>
-                            <li><span>5</span> Subdomains</li>
-                            <li><span>8</span> Databases</li>
-                            <li><span>Advanced</span> Support</li>
-                        </ul>
-                        <button><a href="#pricing__plans">Choose Plan</a></button>
-                    </li>
-                    <!-- Plan #3 -->
-                    <li class="plan">
-                        <h3 class="plan__title">Professional</h3>
-                        <img src="build/assets/images/hosting-professional.webp" alt="Pricing Plan Image" type="image/webp" loading="lazy" width="256" height="256" class="plan__icon">
-                        <h4 class="plan__price">45</h4>
-                        <p class="plan__period">Per Month</p>
-                        <ul class="plan__details">
-                            <li><span>50GB</span> HDD Space</li>
-                            <li><span>20</span> Email Addresses</li>
-                            <li><span>10</span> Subdomains</li>
-                            <li><span>20</span> Databases</li>
-                            <li><span>Professional</span> Support</li>
-                        </ul>
-                        <button><a href="#pricing__plans">Choose Plan</a></button>
-                    </li>
-                </ul>
-            </div>
+            <ul class="content">
+                <!-- Single Plan Container -->
+                <!-- Plan #1 -->
+                <li class="plan">
+                    <!-- Plan Title -->
+                    <h3 class="plan__title">Basic</h3>
+                    <!-- Plan Image -->
+                    <img src="build/assets/images/hosting-basic.webp" alt="Pricing Plan Image" type="image/webp" loading="lazy" width="256" height="256" class="plan__icon">
+                    <!-- Plan Price -->
+                    <h4 class="plan__price">15</h4>
+                    <p class="plan__period">Per Month</p>
+                    <!-- Plan Details -->
+                    <ul class="plan__details">
+                        <li><span>10GB</span> HDD Space</li>
+                        <li><span>5</span> Email Addresses</li>
+                        <li><span>2</span> Subdomains</li>
+                        <li><span>4</span> Databases</li>
+                        <li><span>Basic</span> Support</li>
+                    </ul>
+                    <!-- Plan Main Action Button -->
+                    <button><a href="#pricing__plans">Choose Plan</a></button>
+                </li>
+                <!-- Plan #2 -->
+                <li class="plan">
+                    <!-- Top Ribbon -->
+                    <div class="ribbon">Most Popular</div>
+                    <h3 class="plan__title">Advanced</h3>
+                    <img src="build/assets/images/hosting-advanced.webp" alt="Pricing Plan Image" type="image/webp" loading="lazy" width="256" height="256" class="plan__icon">
+                    <h4 class="plan__price">25</h4>
+                    <p class="plan__period">Per Month</p>
+                    <ul class="plan__details">
+                        <li><span>20GB</span> HDD Space</li>
+                        <li><span>10</span> Email Addresses</li>
+                        <li><span>5</span> Subdomains</li>
+                        <li><span>8</span> Databases</li>
+                        <li><span>Advanced</span> Support</li>
+                    </ul>
+                    <button><a href="#pricing__plans">Choose Plan</a></button>
+                </li>
+                <!-- Plan #3 -->
+                <li class="plan">
+                    <h3 class="plan__title">Professional</h3>
+                    <img src="build/assets/images/hosting-professional.webp" alt="Pricing Plan Image" type="image/webp" loading="lazy" width="256" height="256" class="plan__icon">
+                    <h4 class="plan__price">45</h4>
+                    <p class="plan__period">Per Month</p>
+                    <ul class="plan__details">
+                        <li><span>50GB</span> HDD Space</li>
+                        <li><span>20</span> Email Addresses</li>
+                        <li><span>10</span> Subdomains</li>
+                        <li><span>20</span> Databases</li>
+                        <li><span>Professional</span> Support</li>
+                    </ul>
+                    <button><a href="#pricing__plans">Choose Plan</a></button>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- Top Videos Section -->
@@ -958,38 +964,35 @@
             <!-- Main Title -->
             <h2>Our Awesome Statistics</h2>
             <!-- Section Content -->
-            <div class="content">
-                <!-- Statistics Cards Container -->
-                <ul class="stats__container">
-                    <!-- Statistics Card #1 -->
-                    <li class="stats__card">
-                        <!-- Main Statistics Card Icon -->
-                        <i class="far fa-user stats__icon"></i>
-                        <!-- Main Statistics Card Number -->
-                        <h3 class="stats__number" data-target="150">150</h3>
-                        <!-- Main Statistics Card Title -->
-                        <p class="stats__title">Clients</p>
-                    </li>
-                    <!-- Statistics Card #2 -->
-                    <li class="stats__card">
-                        <i class="fas fa-code stats__icon"></i>
-                        <h3 class="stats__number" data-target="135">135</h3>
-                        <p class="stats__title">Projects</p>
-                    </li>
-                    <!-- Statistics Card #3 -->
-                    <li class="stats__card">
-                        <i class="fas fa-earth-africa stats__icon"></i>
-                        <h3 class="stats__number" data-target="50">50</h3>
-                        <p class="stats__title">Countries</p>
-                    </li>
-                    <!-- Statistics Card #4 -->
-                    <li class="stats__card">
-                        <i class="far fa-money-bill-alt stats__icon"></i>
-                        <h3 class="stats__number" data-target="500">500</h3>
-                        <p class="stats__title">Money</p>
-                    </li>
-                </ul>
-            </div>
+            <ul class="content">
+                <!-- Statistics Card #1 -->
+                <li class="stats__card">
+                    <!-- Main Statistics Card Icon -->
+                    <i class="far fa-user stats__icon"></i>
+                    <!-- Main Statistics Card Number -->
+                    <h3 class="stats__number" data-target="150">150</h3>
+                    <!-- Main Statistics Card Title -->
+                    <p class="stats__title">Clients</p>
+                </li>
+                <!-- Statistics Card #2 -->
+                <li class="stats__card">
+                    <i class="fas fa-code stats__icon"></i>
+                    <h3 class="stats__number" data-target="135">135</h3>
+                    <p class="stats__title">Projects</p>
+                </li>
+                <!-- Statistics Card #3 -->
+                <li class="stats__card">
+                    <i class="fas fa-earth-africa stats__icon"></i>
+                    <h3 class="stats__number" data-target="50">50</h3>
+                    <p class="stats__title">Countries</p>
+                </li>
+                <!-- Statistics Card #4 -->
+                <li class="stats__card">
+                    <i class="far fa-money-bill-alt stats__icon"></i>
+                    <h3 class="stats__number" data-target="500">500</h3>
+                    <p class="stats__title">Money</p>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- Discount Section -->
