@@ -1,12 +1,14 @@
 // Import Dependencies:
 import gulp from 'gulp';
-import imagewebp from 'gulp-webp';
+import webp from 'imagemin-webp';
+import imagemin from 'gulp-imagemin';
+import extReplace from 'gulp-ext-replace';
 import minify from 'gulp-clean-css';
 import purgecss from 'gulp-purgecss';
 import rename from 'gulp-rename';
 
 /**
- * @description
+ * @description Move FontAwesome Fonts To A Specific Destination.
  */
 const syncFontAwesome = () => {
     return gulp.src('plugins/fontawesome-*/webfonts/*')
@@ -17,12 +19,15 @@ gulp.task('syncFontAwesome', syncFontAwesome);
 /**
  * @description Convert (.png, .jpg) Images Into (.webp) Images.
  */
-const convertImages = () => {
+const optimizeImages = () => {
     return gulp.src('assets/**/*.{png,jpg}')
-            .pipe(imagewebp())
+            .pipe(imagemin([
+                webp({ quality: 25, })
+            ]))
+            .pipe(extReplace('.webp'))
             .pipe(gulp.dest('build/assets'));
 };
-gulp.task('convertImages', convertImages);
+gulp.task('optimizeImages', optimizeImages);
 
 /**
  * @description Remove unused CSS Rules.
@@ -49,14 +54,14 @@ gulp.task('minifyStyles', minifyStyles);
  * @description Watch Specific Tasks.
  */
 const watchTasks = () => {
-    gulp.watch([ 'assets', '!assets/fonts'], gulp.series('convertImages'));
+    gulp.watch([ 'assets', '!assets/fonts'], gulp.series('optimizeImages'));
     gulp.watch([ 'css/*.css' ], gulp.series('unusedCSS'));
     gulp.watch([ 'build/**/*.css', '!build/**/*.min.css'], gulp.series('minifyStyles'));
 };
 gulp.task('watchTasks', watchTasks);
 
 export default gulp.series([
-    convertImages,
+    optimizeImages,
     unusedCSS,
     syncFontAwesome,
     minifyStyles,
