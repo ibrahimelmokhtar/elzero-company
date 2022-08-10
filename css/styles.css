@@ -616,6 +616,7 @@ section#landing { padding: 0; }
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    --animation-play-state: paused;  /* Used Through JS Script */
     transition-property: transform, border-color;
     transition-duration: var(--transition-duration);
 }
@@ -718,6 +719,7 @@ section#landing { padding: 0; }
     background-color: var(--star-color);
     animation: calc(var(--transition-duration) / 2) linear alternate forwards;
     animation-delay: calc( (var(--i) - 1) * (var(--transition-duration) / 2));
+    animation-play-state: var(--animation-play-state); /* Used Through JS Script */
 }
 /* Full Star Type Fill Effect */
 #testimonials .star.full__star::before { animation-name: fullStar; }
