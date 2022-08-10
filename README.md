@@ -24,6 +24,7 @@
 - 🖥️ Active Section Indicator
 - 🌟 Clients rating animation
 - 📊 Skill bars animation
+- ⏰ Countdown event date
 - 🌱 Smooth scrolling behavior
 - ✨ And more!
 
