@@ -185,8 +185,10 @@ header nav { height: 10vh; }
     transition: width var(--transition-duration);
 }
 /* Navbar Main Item Hover Effects */
-#links > li > a:hover { background-color: var(--hover-color); color: var(--main-color); }
-#links > li > a:hover::before { width: 100%; }
+#links > li > a:hover,
+#links > li > a.active { background-color: var(--hover-color); color: var(--main-color); }
+#links > li > a:hover::before,
+#links > li > a.active::before { width: 100%; }
 /* Mega Menu Container */
 #additional__links {
     background-color: #ffffff;
@@ -219,7 +221,7 @@ header nav { height: 10vh; }
 #additional__links .extra__links li { width: 100%; position: relative; }
 #additional__links .extra__links li:not(:last-child) { border-bottom: 1px solid #e9e6e6; }
 /* Mega Menu Links Hover Effect */
-#additional__links .extra__links li::before {
+#additional__links .extra__links a::before {
     content: '';
     background-color: var(--hover-color);
     width: 0;
@@ -227,9 +229,11 @@ header nav { height: 10vh; }
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     transition: width var(--transition-duration);
 }
-#additional__links .extra__links li:hover::before { width: 100%; }
+#additional__links .extra__links a:hover::before,
+#additional__links .extra__links a.active::before { width: 100%; }
 /* Mega Menu Main Links */
 #additional__links .extra__links a {
     font-size: 14pt;

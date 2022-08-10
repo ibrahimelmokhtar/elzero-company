@@ -21,6 +21,7 @@
 - ⭐ Single Page Website
 - 🤖 Responsive layout on ALL devices
 - ⚡ Fast and lightweight website; based on Lighthouse report
+- 🖥️ Active Section Indicator
 - 🌱 Smooth scrolling behavior
 - ✨ And more!
 
