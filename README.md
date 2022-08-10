@@ -22,7 +22,8 @@
 - 🤖 Responsive layout on ALL devices
 - ⚡ Fast and lightweight website; based on Lighthouse report
 - 🖥️ Active Section Indicator
-- 🌟 Clients rating animation on scrolling
+- 🌟 Clients rating animation
+- 📊 Skill bars animation
 - 🌱 Smooth scrolling behavior
 - ✨ And more!
 
