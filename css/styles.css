@@ -998,7 +998,7 @@ section#landing { padding: 0; }
     position: absolute;
     top: 0;
     left: 0;
-    transition: width var(--transition-duration);
+    transition: width calc(4 * var(--transition-duration));
 }
 /* Actual Skill Value Arrow */
 #our__skills .actual__progress::before {

@@ -8,9 +8,8 @@
 
 ## Design Previews
 
-| Desktop Preview | Mobile Preview |
-| --------------- | -------------- |
-| [Desktop Preview](.github/preview-desktop.png) | [Mobile Preview](.github/preview-mobile.png) |
+| [🖥️ Desktop Preview](.github/preview-desktop.png) | [📱 Mobile Preview](.github/preview-mobile.png) |
+| -------------------------------------------------- | ----------------------------------------------- |
 
 ## Lighthouse Results
 
@@ -25,6 +24,7 @@
 - 🌟 Clients rating animation
 - 📊 Skill bars animation
 - ⏰ Countdown event date
+- 📈 Numbers increment
 - 🌱 Smooth scrolling behavior
 - ✨ And more!
 
