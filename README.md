@@ -20,6 +20,7 @@
 - ⭐ Single Page Website
 - 🤖 Responsive layout on ALL devices
 - ⚡ Fast and lightweight website; based on Lighthouse report
+- 💬 Multi-language website
 - 🖥️ Active Section Indicator
 - 🌟 Clients rating animation
 - 📊 Skill bars animation

@@ -1,0 +1,211 @@
+/* ************************** Language Button *************************** */
+#lang__button {
+    /* border-top-right-radius: 8px; */
+    /* border-bottom-right-radius: 8px; */
+    border-radius: 0 8px 8px 0;
+    right: unset;
+    left: 0;
+}
+/* ************************** Header *************************** */
+/* Top Ribbon On Main Content */
+#links > li > a::before {
+    left: unset;
+    right: 0;
+}
+/* Mega Menu Container */
+#additional__links {
+    right: -120%;
+    transition-property: right, opacity;
+}
+#links > li:last-child:hover #additional__links {
+    right: var(--main-padding);
+}
+/* Mega Menu Links Hover Effect */
+#additional__links .extra__links a::before {
+    left: unset;
+    right: 0;
+}
+/* Mega Menu List Icons */
+#additional__links .list__icon {
+    margin-right: 0;
+    margin-left: 16px;
+}
+/* ************************** Articles *************************** */
+/* Article Action Icon */
+#articles .article__action::after {
+    content: '\f30a';
+}
+@keyframes moveArrow {
+    from { transform: translateX(16px); }
+    to { transform: translateX(0); }
+}
+/* ************************** Gallery *************************** */
+/* Main Card Image Hover Effect */
+#gallery .image__container:hover img {
+    transform: rotate(-6deg) scale(1.1);
+}
+/* ************************** Features *************************** */
+/* Image Skewed Background Shape */
+#features .image__container::after {
+    right: unset;
+    left: 0;
+    border-width: 0 800px 120px 0;
+}
+/* Image Skewed Background Shape Hover Effect */
+#features .feature__card:hover .image__container::after {
+    border-width: 0 0 120px 800px;
+}
+/* Button Fill Hover Effect */
+#features button::before {
+    left: unset;
+    right: 0;
+}
+/* ************************** Testimonials *************************** */
+/* Profile Image Container */
+#testimonials .image__container {
+    right: unset;
+    left: 0;
+    transform: translate(25%, -50%);
+}
+/* Generic Star Type Fill Effect */
+#testimonials .star::before {
+    left: unset;
+    right: 0;
+}
+/* ************************** Team Members *************************** */
+/* Main Visible Container And Main Hover Container */
+#team__members .member__card::before,
+#team__members .member__card::after {
+    right: unset;
+    left: 0;
+}
+/* Team Members Main Info */
+#team__members .member__info {
+    margin-left: unset;
+    margin-right: var(--member-card-empty);
+}
+/* ************************** Services *************************** */
+/* Service Card Number */
+#services .text__container::before {
+    left: unset;
+    right: 0;
+}
+/* Service Number Skewed Background */
+#services .text__container::after {
+    transform: skew(30deg, 0);
+    left: unset;
+    right: 80px;
+}
+/* Service Details Link */
+#services .service__details {
+    margin-right: 0;
+    margin-left: 16px;
+}
+#services .service__details::before {
+    left: unset;
+    right: -1px;
+}
+#services .service__details::after {
+    right: unset;
+    left: -1px;
+}
+/* Service Details Link Hover Effects */
+#services .service__card:hover .service__details::before {
+    border-color: var(--main-color) var(--main-color) transparent transparent;
+}
+#services .service__card:hover .service__details::after {
+    border-color: transparent transparent var(--main-color) var(--main-color);
+}
+/* ************************** Our Skills *************************** */
+/* Actual Skill Progress */
+#our__skills .actual__progress {
+    left: unset;
+    right: 0;
+}
+/* Actual Skill Value Arrow */
+#our__skills .actual__progress::before {
+    right: unset;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+/* Actual Skill Progress Value */
+#our__skills .actual__progress::after {
+    right: unset;
+    left: 0;
+    transform: translate(-50%, -100%);
+}
+/* ************************** Work Steps *************************** */
+/* Single Work Step Text Container */
+#work__steps .text__container {
+    margin-left: 0;
+    margin-right: 32px;
+}
+/* ************************** Events *************************** */
+/* Events Main Image Container */
+#events .image__container {
+    margin-right: 0;
+    margin-left: 32px;
+}
+/* Single Date Part Container */
+#events .date__part:not(:last-of-type) {
+    margin-right: 0;
+    margin-left: 16px;
+}
+/* ************************** Pricing Plans *************************** */
+/* Plan Container Top Tag Ribbon */
+#pricing__plans .ribbon {
+    padding: 16px 16px 32px;
+    right: unset;
+    left: 16px;
+    writing-mode: sideways-lr;
+}
+/* Single Plan Hover Effect Containers */
+#pricing__plans .plan::before {
+    left: unset;
+    right: 0;
+}
+#pricing__plans .plan::after {
+    right: unset;
+    left: 0;
+}
+/* ************************** Top Videos *************************** */
+/* Main Heading Icon */
+#videos .main__icon {
+    transform: rotate(180deg);
+}
+/* Current Video Main Icon */
+#videos .video__icon {
+    padding-right: 0;
+    padding-left: 32px;
+}
+/* Current Video Main Period */
+#videos .current__period {
+    padding-left: 0;
+    padding-right: 16px;
+}
+/* ************************** Footer *************************** */
+/* Single Social Media Account Link */
+footer .socials li:not(:last-of-type) {
+    margin-right: 0;
+    margin-left: 16px;
+}
+/* Single Important Link */
+footer .important__links li a {
+    transition-property: padding-right, color;
+}
+/* Single Important Link Hover Effect */
+footer .important__links li:hover a {
+    padding-left: 0;
+    padding-right: 16px;
+}
+/* Single Important Link Icon */
+footer .important__links li a::before {
+    content: '\f100';
+    margin-right: 0;
+    margin-left: 8px;
+}
+/* Single Contact Main Icon */
+footer .contacts li .contact__icon {
+    margin-right: 0;
+    margin-left: 16px;
+}

@@ -258,9 +258,6 @@ readers do not read off random characters that represent icons */
 .fa-phone-volume::before {
   content: "\f2a0"; }
 
-.fa-right-long::before {
-  content: "\f30b"; }
-
 .fa-screwdriver-wrench::before {
   content: "\f7d9"; }
 
